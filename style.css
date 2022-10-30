@@ -1,0 +1,140 @@
+/* 
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* mobile */
+.mainContainer{
+    margin: 20px;
+    background-color: hsl(0, 0%, 100%);
+    width: 325px;
+    border-radius: 10px;
+
+}
+.product_image{
+    width: 100%;
+    height: 300px;
+    background-image: url(./image-product-mobile.jpg);
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px ;
+}
+.main-content{
+    padding: 20px;
+}
+.header, .brand-name, .product-desciption, .product-price{
+    padding-bottom: 20px;
+}
+.header {
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+}
+.product-desciption{
+    font-size: 40px;
+    line-height: 30px;
+}
+.product-price{
+    display: flex;
+    flex-direction: row;
+}
+.brand-now-price{
+    padding-right: 25px;
+    color: hsl(158, 36%, 37%);
+}
+.was-price{
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    color: hsl(228, 12%, 48%);
+}
+.header, .product-desciption, .was-price .cart-btn{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: hsl(228, 12%, 48%);
+    font-size: smaller;
+}
+.brand-name, .brand-now-price{
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+}
+.icon{
+    margin-right: 10px;
+}
+.cart-btn{
+    padding: 10px 25px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(158, 36%, 37%);
+    color:white ;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cart-btn:hover, .cart-btn:focus {
+    background-color: hsl(159, 37%, 24%);
+}
+/* DESKTOP */
+
+@media screen and (min-width: 1440px) {
+    .mainContainer{
+        width: 600px;
+        display: flex;
+    }
+   .product_image{
+    background-image: url(./image-product-desktop.jpg);
+    background-size: cover;
+    height: 450px;
+    width: 50%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   }
+   .main-content{
+    width: 50%;
+   }
+  }
